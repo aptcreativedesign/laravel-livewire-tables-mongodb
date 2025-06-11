@@ -1,5 +1,5 @@
 {
-    "name": "aptcreativedesign/laravel-livewire-tables",
+    "name": "aptcreativedesign/laravel-livewire-tables-mongodb",
     "description": "A dynamic table component for Laravel Livewire",
     "keywords": [
         "rappasoft",
