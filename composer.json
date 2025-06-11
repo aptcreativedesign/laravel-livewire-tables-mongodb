@@ -1,16 +1,22 @@
 {
-    "name": "rappasoft/laravel-livewire-tables",
+    "name": "ridown/laravel-livewire-tables",
     "description": "A dynamic table component for Laravel Livewire",
     "keywords": [
         "rappasoft",
         "livewire",
         "datatables",
         "tables",
-        "laravel"
+        "laravel",
+        "mongodb"
     ],
-    "homepage": "https://github.com/rappasoft/laravel-livewire-tables",
+    "homepage": "https://github.com/ridown/laravel-livewire-tables",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Adam Thomas",
+            "email": "adam.thomas@webuyanyphone.com",
+            "role": "Lead Senior Developer"
+        },
         {
             "name": "Anthony Rappa",
             "email": "rappa819@gmail.com",
@@ -27,7 +33,8 @@
         "blade-ui-kit/blade-heroicons": "^2.1",
         "illuminate/contracts": "^10.0|^11.0|^12.0",
         "illuminate/support": "^10.0|^11.0|^12.0",
-        "livewire/livewire": "^3.0|dev-main"
+        "livewire/livewire": "^3.0|dev-main",
+        "mongodb/laravel-mongodb": "^4.0|^5.4.1"
     },
     "require-dev": {
         "ext-sqlite3": "*",

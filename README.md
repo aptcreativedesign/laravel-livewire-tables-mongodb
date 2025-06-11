@@ -22,7 +22,7 @@ A dynamic Laravel Livewire component for data tables.
 You can install the package via composer:
 
 ``` bash
-composer require rappasoft/laravel-livewire-tables
+composer require ridown/laravel-livewire-tables
 ```
 
 You must also have [Alpine.js](https://alpinejs.dev) version 3 or greater installed and available to the component.
@@ -39,7 +39,7 @@ See the [documentation](https://rappasoft.com/docs/laravel-livewire-tables) for 
 namespace App\Http\Livewire\Admin\User;
 
 use App\Domains\Auth\Models\User;
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 

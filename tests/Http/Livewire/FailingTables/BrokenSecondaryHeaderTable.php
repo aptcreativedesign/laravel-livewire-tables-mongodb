@@ -2,7 +2,7 @@
 
 namespace Rappasoft\LaravelLivewireTables\Tests\Http\Livewire\FailingTables;
 
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Tests\Http\Livewire\BaseTable;
 use Rappasoft\LaravelLivewireTables\Tests\Models\{Breed,Pet,Species};

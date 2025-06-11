@@ -2,7 +2,7 @@
 
 namespace Rappasoft\LaravelLivewireTables\Tests\Http\Livewire;
 
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 use Illuminate\Support\Facades\App;
 use Livewire\Attributes\On;
 use Rappasoft\LaravelLivewireTables\Tests\Models\Breed;

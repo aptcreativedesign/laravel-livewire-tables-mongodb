@@ -125,7 +125,7 @@ final class FilterVisualsTest extends TestCase
                                 ->map(fn ($breed) => $breed->name)
                                 ->toArray()
                         )
-                        ->filter(function (\Illuminate\Database\Eloquent\Builder $builder, array $values) {
+                        ->filter(function (\MongoDB\Laravel\Eloquent\Builder $builder, array $values) {
                             return $builder->whereIn('pets.breed_id', $values);
                         }),
                     \Rappasoft\LaravelLivewireTables\Views\Filters\MultiSelectDropdownFilter::make('Species')
@@ -137,13 +137,13 @@ final class FilterVisualsTest extends TestCase
                                 ->map(fn ($species) => $species->name)
                                 ->toArray()
                         )
-                        ->filter(function (\Illuminate\Database\Eloquent\Builder $builder, array $values) {
+                        ->filter(function (\MongoDB\Laravel\Eloquent\Builder $builder, array $values) {
                             return $builder->whereIn('pets.species_id', $values);
                         })
                         ->setPillsSeparator('<br />'),
 
                     \Rappasoft\LaravelLivewireTables\Views\Filters\TextFilter::make('Pet Name', 'pet_name_filter')
-                        ->filter(function (\Illuminate\Database\Eloquent\Builder $builder, string $value) {
+                        ->filter(function (\MongoDB\Laravel\Eloquent\Builder $builder, string $value) {
                             return $builder->where('pets.name', '=', $value);
                         }),
                 ];
@@ -186,7 +186,7 @@ final class FilterVisualsTest extends TestCase
                                 ->map(fn ($breed) => $breed->name)
                                 ->toArray()
                         )
-                        ->filter(function (\Illuminate\Database\Eloquent\Builder $builder, array $values) {
+                        ->filter(function (\MongoDB\Laravel\Eloquent\Builder $builder, array $values) {
                             return $builder->whereIn('pets.breed_id', $values);
                         }),
                     \Rappasoft\LaravelLivewireTables\Views\Filters\MultiSelectDropdownFilter::make('Species')
@@ -198,13 +198,13 @@ final class FilterVisualsTest extends TestCase
                                 ->map(fn ($species) => $species->name)
                                 ->toArray()
                         )
-                        ->filter(function (\Illuminate\Database\Eloquent\Builder $builder, array $values) {
+                        ->filter(function (\MongoDB\Laravel\Eloquent\Builder $builder, array $values) {
                             return $builder->whereIn('pets.species_id', $values);
                         })
                         ->setPillsSeparator('<br />'),
 
                     \Rappasoft\LaravelLivewireTables\Views\Filters\TextFilter::make('Pet Name', 'pet_name_filter')
-                        ->filter(function (\Illuminate\Database\Eloquent\Builder $builder, string $value) {
+                        ->filter(function (\MongoDB\Laravel\Eloquent\Builder $builder, string $value) {
                             return $builder->where('pets.name', '=', $value);
                         }),
                 ];

@@ -2,7 +2,7 @@
 
 namespace Rappasoft\LaravelLivewireTables\Traits;
 
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 use Livewire\Attributes\Computed;
 use Rappasoft\LaravelLivewireTables\Events\SearchApplied;
 use Rappasoft\LaravelLivewireTables\Traits\Core\QueryStrings\HasQueryStringForSearch;

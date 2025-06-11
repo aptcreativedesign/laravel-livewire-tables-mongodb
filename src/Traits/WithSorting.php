@@ -2,7 +2,7 @@
 
 namespace Rappasoft\LaravelLivewireTables\Traits;
 
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Rappasoft\LaravelLivewireTables\Traits\Configuration\SortingConfiguration;
 use Rappasoft\LaravelLivewireTables\Traits\Core\QueryStrings\HasQueryStringForSort;
@@ -105,7 +105,8 @@ trait WithSorting
             } elseif ($column->isBaseColumn()) {
                 $this->setBuilder($this->getBuilder()->orderBy($column->getColumnSelectName(), $direction));
             } else {
-                $value = $this->getBuilder()->getGrammar()->wrap($column->getColumn().' as '.$column->getColumnSelectName());
+//                $value = $this->getBuilder()->getGrammar()->wrap($column->getColumn().' as '.$column->getColumnSelectName());
+                $value = $this->getBuilder()->getGrammar()->wrap($column->getColumn());
                 $segments = preg_split('/\s+as\s+/i', $value);
                 $this->setBuilder($this->getBuilder()->orderByRaw($segments[1].' '.$direction));
             }

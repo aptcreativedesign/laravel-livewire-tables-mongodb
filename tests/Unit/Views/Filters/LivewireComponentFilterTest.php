@@ -2,7 +2,7 @@
 
 namespace Rappasoft\LaravelLivewireTables\Tests\Unit\Views\Filters;
 
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 use PHPUnit\Framework\Attributes\Group;
 use Rappasoft\LaravelLivewireTables\Views\Filters\LivewireComponentFilter;
 

@@ -9,7 +9,7 @@ weight: 2
 namespace App\Livewire;
 
 use App\Models\{Tag,User};
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use Rappasoft\LaravelLivewireTables\Views\Columns\{BooleanColumn, ImageColumn};

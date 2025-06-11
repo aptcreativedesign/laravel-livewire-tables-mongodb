@@ -2,7 +2,7 @@
 
 namespace Rappasoft\LaravelLivewireTables\Traits;
 
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\Traits\Configuration\QueryConfiguration;
 use Rappasoft\LaravelLivewireTables\Traits\Helpers\QueryHelpers;
 

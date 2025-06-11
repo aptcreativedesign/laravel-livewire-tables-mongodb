@@ -19,12 +19,13 @@ class Column
             $this->from = trim($from);
             $this->hash = md5($this->from);
 
-            if (Str::contains($this->from, '.')) {
-                $this->field = Str::afterLast($this->from, '.');
-                $this->relations = explode('.', Str::beforeLast($this->from, '.'));
-            } else {
-                $this->field = $this->from;
-            }
+//            if (Str::contains($this->from, '.')) {
+//                $this->field = Str::afterLast($this->from, '.');
+//                $this->relations = explode('.', Str::beforeLast($this->from, '.'));
+//            } else {
+//                $this->field = $this->from;
+//            }
+            $this->field = $this->from;
         } else {
             $this->field = Str::snake($title);
             $this->hash = md5($this->field);

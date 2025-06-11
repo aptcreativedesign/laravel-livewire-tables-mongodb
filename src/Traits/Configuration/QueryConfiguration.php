@@ -2,7 +2,7 @@
 
 namespace Rappasoft\LaravelLivewireTables\Traits\Configuration;
 
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 
 trait QueryConfiguration
 {

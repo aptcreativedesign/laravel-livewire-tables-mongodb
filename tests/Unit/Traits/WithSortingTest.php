@@ -86,7 +86,7 @@ final class WithSortingTest extends TestCase
 
         $this->basicTable->applySorting();
 
-        $this->assertStringNotContainsStringIgnoringCase('order by', $this->basicTable->getBuilder()->toSql());
+        $this->assertStringNotContainsStringIgnoringCase('order by', $this->basicTable->getBuilder()->toMql());
     }
 
     public function test_sort_applies_to_query(): void
@@ -95,6 +95,6 @@ final class WithSortingTest extends TestCase
 
         $this->basicTable->applySorting();
 
-        $this->assertStringContainsStringIgnoringCase('order by "id"', $this->basicTable->getBuilder()->toSql());
+        $this->assertStringContainsStringIgnoringCase('order by "id"', $this->basicTable->getBuilder()->toMql());
     }
 }

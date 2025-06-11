@@ -2,7 +2,7 @@
 
 namespace Rappasoft\LaravelLivewireTables\Traits;
 
-use Illuminate\Database\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
@@ -220,11 +220,13 @@ trait WithData
 
         if ($this->getExcludeDeselectedColumnsFromQuery()) {
             foreach ($this->getSelectedColumnsForQuery() as $column) {
-                $this->setBuilder($this->getBuilder()->addSelect($column->getColumn().' as '.$column->getColumnSelectName()));
+//                $this->setBuilder($this->getBuilder()->addSelect($column->getColumn().' as '.$column->getColumnSelectName()));
+                $this->setBuilder($this->getBuilder()->addSelect($column->getColumn()));
             }
         } else {
             foreach ($this->getColumns()->reject(fn (Column $column) => $column->isLabel()) as $column) {
-                $this->setBuilder($this->getBuilder()->addSelect($column->getColumn().' as '.$column->getColumnSelectName()));
+//                $this->setBuilder($this->getBuilder()->addSelect($column->getColumn().' as '.$column->getColumnSelectName()));
+                $this->setBuilder($this->getBuilder()->addSelect($column->getColumn()));
             }
         }
 
